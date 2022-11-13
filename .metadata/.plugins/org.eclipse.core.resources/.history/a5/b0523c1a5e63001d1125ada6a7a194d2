@@ -1,0 +1,19 @@
+/*
+ * M1_fsm.c
+ *
+ *  Created on: Nov 13, 2022
+ *      Author: admin
+ */
+
+
+
+#include"M1_fsm.h"
+void M1_fsm_run(){
+	switch(status){
+	case INIT:
+		count1 = 30;
+		count2 = 20;
+		status = M1_RED_GREEN;
+		setTimer1(1000);	//timer 1 to countdown the number display on LED
+	}
+}

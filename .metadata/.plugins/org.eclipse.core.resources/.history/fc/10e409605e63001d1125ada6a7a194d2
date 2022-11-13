@@ -1,0 +1,35 @@
+/*
+ * M1_fsm.c
+ *
+ *  Created on: Nov 13, 2022
+ *      Author: admin
+ */
+
+
+
+#include"M1_fsm.h"
+void M1_fsm_run(){
+	switch(status){
+	case INIT:
+		count1 = 30;
+		count2 = 20;
+		status = M1_RED_GREEN;
+		setTimer1(1000);	//timer 1 to countdown the number display on LED
+		setTimer2(2000);	//timer 2 to perform 2 traffic light
+		break;
+	case M1_RED_GREEN:
+		//TODO
+		break;
+	case M1_RED_YELLOW:
+		//TODO
+		break;
+	case M1_GREEN_RED:
+		//TODO
+		break;
+	case M1_YELLOW_RED:
+		//TODO
+		break;
+	default:
+		break;
+	}
+}
